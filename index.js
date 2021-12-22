@@ -3,12 +3,13 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Is there a title for this Grand Project of yours?',
+        message: 'Welcome to the README Generator, \n We should get a title for your new  amazing project...',
     },
     {
         type: 'input',
@@ -51,7 +52,7 @@ inquirer
     .then((answers) => {
         const readmecontent = generateMarkdown(answers);
         fs.writeFile('README-test.md', readmecontent, (err) =>
-            err ? console.log(err) : console.log(`Succcessfully created ReadMe with filename ${readmefilename}`)
+            err ? console.log(err) : console.log(`Succcessfully created ReadMe with filename README-test.md`)
         );
 });
 
