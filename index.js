@@ -3,13 +3,18 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+const bottomui = new inquirer.ui.BottomBar();
+
+
+bottomui.log.write('M.L.R.M.G (Massively Late README Generator v 1.0')
+
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Welcome to the README Generator, \n We should get a title for your new  amazing project...',
+        message: 'We should get a title for your new  amazing project...',
     },
     {
         type: 'input',
@@ -47,20 +52,26 @@ const questions = [
     //Github UserName and Email for Section: Questions
 ];
 
-inquirer
+const inquire_User = () => {
+    return inquirer
     .prompt(questions)
-    .then((answers) => {
-        const readmecontent = generateMarkdown(answers);
-        fs.writeFile('README-test.md', readmecontent, (err) =>
-            err ? console.log(err) : console.log(`Succcessfully created ReadMe with filename README-test.md`)
-        );
-});
+} 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const file = fs;
+    file.writeFileSync(fileName, data);
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    console.log(`Welcome to the M.L.R.M.G`)
+    inquire_User()
+    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
+    .then(() => console.log('Successfully Wrote README.md'))
+    .catch((err) => console.error(err));
+
+}
 
 // Function call to initialize app
 init();
