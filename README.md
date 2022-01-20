@@ -22,7 +22,7 @@
 
 ###Video of Usage:
 
-[Video of application](https://www.youtube.com/watch?v=KbOw2eIFujY)
+[Video of application](https://youtu.be/WJIBS33Uh5E)
 
    It is meant to be used within the command line of your personal terminal
 
