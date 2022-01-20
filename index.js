@@ -21,7 +21,7 @@ function writeToFile(fileName, data) {
 function init() {
     console.log(`Welcome to the M.L.R.M.G`)
     inquire_User()
-    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
+    .then((answers) => writeToFile('./ReadMeOutput/README.md', generateMarkdown(answers)))
     .then(() => console.log('Successfully Wrote README.md'))
     .catch((err) => console.error(err));
 
