@@ -15,8 +15,11 @@
 - [Questions](#questions)
 
 ## Installation
-
-   Clone from Github, then use the commant `npm install` followed by `node index.js` to begin the command-line program
+  using Terminal or Git Bash
+  
+   - Clone from Github using 'git pull'
+   - Use the Command `npm install` to install requirements
+   - Use `node index.js` to begin the command-line program
 
 ## Usage
 
