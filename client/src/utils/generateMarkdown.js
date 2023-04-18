@@ -75,12 +75,12 @@ function generateMarkdown(data) {
    ${data[2]}
 
 ## Usage
+    ${data[3]}
 
 ### Video of Usage:
 
-[Video of application](${data[3]})
+[Video of application](${data[4]})
 
-   ${data[4]}
 
 ## Contributions
 
@@ -88,14 +88,14 @@ function generateMarkdown(data) {
 
 ## License
 
-## ${data[6]}
-   ${renderLicenseBadge(data[6])}
-   ${renderLicenseLink(data[6])}
-   ${renderLicenseSection(data[6])}
+## ${data[7]}
+   ${renderLicenseBadge(data[7].name)}
+   ${renderLicenseLink(data[7])}
+   ${renderLicenseSection(data[7])}
         
 ## Tests
 
-   ${data[7]}
+   ${data[6]}
 
 ## Contact
 

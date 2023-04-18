@@ -5,7 +5,6 @@ import ReadmeForm from '../components/Readme_form';
 
 
 const MainPage = () => {
-    //React State Imports for Forms
 
     //Return Dialog
     return (

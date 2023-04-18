@@ -152,7 +152,7 @@ const ReadmeForm = () => {
                     type="radio"
                     id={license}
                     name="license"
-                    value={questions[7].choices[0].name}
+                    value="Apache"
                   />
                   <label>{questions[7].choices[0].name}</label>
                 </tr>
@@ -161,7 +161,7 @@ const ReadmeForm = () => {
                     type="radio"
                     id={license}
                     name="license"
-                    value={questions[7].choices[1].name}
+                    value="MIT"
                   />
                   <label>{questions[7].choices[1].name}</label>
                 </tr>
@@ -170,7 +170,7 @@ const ReadmeForm = () => {
                     type="radio"
                     id={license}
                     name="license"
-                    value={questions[7].choices[2].name}
+                    value="Mozilla Public License"
                   />
                   <label>{questions[7].choices[2].name}</label>
                 </tr>
@@ -179,7 +179,7 @@ const ReadmeForm = () => {
                     type="radio"
                     id={license}
                     name="license"
-                    value={questions[7].choices[3].name}
+                    value="GNU"
                   />
                   <label>{questions[7].choices[3].name}</label>
                 </tr>
@@ -188,9 +188,19 @@ const ReadmeForm = () => {
                     type="radio"
                     id={license}
                     name="license"
-                    value={questions[7].choices[4].name}
+                    value="The Unlicense"
                   />
                   <label>{questions[7].choices[4].name}</label>
+                </tr>
+                <tr>
+                  <input
+                    type="radio"
+                    id={license}
+                    name="license"
+                    value="none"
+                  />
+                  <label>No License</label>
+
                 </tr>
               </table>
             </td>
