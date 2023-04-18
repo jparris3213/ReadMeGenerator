@@ -1,19 +1,21 @@
-const inquirer = require("inquirer");
+import React, { useState} from "react";
 
 //Housekeeping
-const first_round_questions = [
+const questions = [
   //First Round of Questions Needed
 
   //Title and one line Description
   {
-    type: "input",
-    name: "title",
+    type: "text",
+    name: "Project Title",
+    var_name:'projecttitle',
     message: "What title should this new awesome application have?",
   },
   //What's your elevator pitch (one line) description?
   {
-    type: "input",
-    name: "description",
+    type: "textarea",
+    name: "Project Description",
+    var_name:'projectdescript',
     message: "Thats a cool name, but what does it do? Describe it for others",
   },
   {
@@ -78,4 +80,4 @@ const first_round_questions = [
 //Questions that need Multiple Parts
 
 //Export info
-module.exports = first_round_questions;
+export default questions

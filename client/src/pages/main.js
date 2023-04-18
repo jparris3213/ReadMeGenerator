@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import ReadmeForm from '../components/Readme_form';
+import TestForm from '../components/testForm';
+
 
 
 
 
 
 const MainPage = () => {
-    
-
+    //React State Imports for Forms
 
     //Return Dialog
     return (
-        <>
-            <p>Hello World</p>
-        </>
+        <div className="container text-center" cz-shortcut-listen="true">
+            <ReadmeForm />
+        </div>
     )
 }
 
