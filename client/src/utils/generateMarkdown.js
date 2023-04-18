@@ -56,10 +56,10 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
 
-# ${data.title}
+# ${data[0]}
 
 ## Description
-  ${data.description}
+  ${data[1]}
   
 ## Table of Contents
 
@@ -72,19 +72,19 @@ function generateMarkdown(data) {
 
 ## Installation
 
-   ${data.install}
+   ${data[2]}
 
 ## Usage
 
 ### Video of Usage:
 
-[Video of application](${data.videoexample})
+[Video of application](${data[3]})
 
-   ${data.usage}
+   ${data[4]}
 
 ## Contributions
 
-   ${data.contribute}
+   ${data[5]}
 
 ## License
 

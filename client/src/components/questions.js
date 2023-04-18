@@ -1,9 +1,7 @@
-import React, { useState} from "react";
+
 
 //Housekeeping
 const questions = [
-  //First Round of Questions Needed
-
   //Title and one line Description
   {
     type: "text",
@@ -20,7 +18,8 @@ const questions = [
   },
   {
     type: "input",
-    name: "install",
+    name: "Installation",
+    var_name:'install',
     message: "How do you Install this grand application, if needed",
   },
   {
