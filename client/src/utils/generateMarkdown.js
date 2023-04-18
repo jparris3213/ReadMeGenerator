@@ -56,10 +56,10 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
 
-# ${data.title}
+# ${data[0]}
 
 ## Description
-  ${data.description}
+  ${data[1]}
   
 ## Table of Contents
 
@@ -72,35 +72,35 @@ function generateMarkdown(data) {
 
 ## Installation
 
-   ${data.install}
+   ${data[2]}
 
 ## Usage
+    ${data[3]}
 
 ### Video of Usage:
 
-[Video of application](${data.videoexample})
+[Video of application](${data[4]})
 
-   ${data.usage}
 
 ## Contributions
 
-   ${data.contribute}
+   ${data[5]}
 
 ## License
 
-## ${data.license}
-   ${renderLicenseBadge(data.license)}
-   ${renderLicenseLink(data.license)}
-   ${renderLicenseSection(data.license)}
+## ${data[7]}
+   ${renderLicenseBadge(data[7].name)}
+   ${renderLicenseLink(data[7])}
+   ${renderLicenseSection(data[7])}
         
 ## Tests
 
-   ${data.tests}
+   ${data[6]}
 
 ## Contact
 
 Please Contact Author using the following:
-[Contact Link] ${data.contact}
+[Contact Link] ${data[8]}
 
 
 ##### made using the awesome README Generator at [Github](https://github.com/jparris3213/ReadMeGenerator)*
