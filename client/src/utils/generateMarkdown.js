@@ -88,19 +88,19 @@ function generateMarkdown(data) {
 
 ## License
 
-## ${data.license}
-   ${renderLicenseBadge(data.license)}
-   ${renderLicenseLink(data.license)}
-   ${renderLicenseSection(data.license)}
+## ${data[6]}
+   ${renderLicenseBadge(data[6])}
+   ${renderLicenseLink(data[6])}
+   ${renderLicenseSection(data[6])}
         
 ## Tests
 
-   ${data.tests}
+   ${data[7]}
 
 ## Contact
 
 Please Contact Author using the following:
-[Contact Link] ${data.contact}
+[Contact Link] ${data[8]}
 
 
 ##### made using the awesome README Generator at [Github](https://github.com/jparris3213/ReadMeGenerator)*

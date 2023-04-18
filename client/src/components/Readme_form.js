@@ -5,38 +5,43 @@ import { Link } from "react-router-dom";
 import questions from "./questions";
 import generateMarkdown from "../utils/generateMarkdown";
 
-
 //Function To Write: Handle the data from the form and send it to Generate Markdown file, which should begin the process of creating the file that will be the ReadMeFile, Do tomorrow
-
 
 const ReadmeForm = () => {
   const formRef = useRef(null);
 
+  //Input State Handlers:
 
-//Input State Handlers:
-
-    const [title, setTitle ] = useState("");
-    const [descript, setDescript] = useState("");
-    const [installation, setInstallation] = useState("");
-    const [usage, setUsage] = useState("");
-    const [videoexample, setVideoExample] = useState("");
-    const [contribute, setContribute] = useState("");
-    const [tests, setTests] = useState("");
-    const [license, setLicense] = useState("");
-    const [contact, setContact] = useState("");
-/*     const locale = "en";
+  const [title, setTitle] = useState("");
+  const [descript, setDescript] = useState("");
+  const [installation, setInstallation] = useState("");
+  const [usage, setUsage] = useState("");
+  const [videoexample, setVideoExample] = useState("");
+  const [contribute, setContribute] = useState("");
+  const [tests, setTests] = useState("");
+  const [license, setLicense] = useState("");
+  const [contact, setContact] = useState("");
+  /*     const locale = "en";
     const [loading, setLoading] = useState(false); */
-
-  
 
   //This gathers the data and sends it where I want it to go, so this will be likely sent to Generate Markdown
   const handleSubmit = (event) => {
     event.preventDefault();
     //setLoading(true);
     //this takes the answers and creates an array that the generateMarkdown.js can map
-    const answers = [title,descript,installation,usage,videoexample,contribute,tests,license,contact]
+    const answers = [
+      title,
+      descript,
+      installation,
+      usage,
+      videoexample,
+      contribute,
+      tests,
+      license,
+      contact,
+    ];
 
-    alert(generateMarkdown(answers))
+    alert(generateMarkdown(answers));
   };
 
   const handleValueChange = (event) => {
@@ -50,7 +55,6 @@ const ReadmeForm = () => {
       <h1>README Creator</h1>
       <form ref={formRef} onSubmit={handleSubmit}>
         <table>
-
           <tr>
             <th>{questions[0].name}</th>
             <td>
@@ -133,7 +137,6 @@ const ReadmeForm = () => {
             <td>
               <table onChange={handleValueChange}>
                 <tr>
-                    
                   <input
                     type="radio"
                     id={license}
@@ -185,7 +188,7 @@ const ReadmeForm = () => {
             <th>{questions[8].name}</th>
             <td>
               <input
-                type="text"
+                type="email"
                 value={contact}
                 name="contact"
                 onChange={(e) => setContact(e.target.value)}
