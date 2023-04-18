@@ -7,10 +7,9 @@ import generateMarkdown from "../utils/generateMarkdown";
 
 //Function To Write: Handle the data from the form and send it to Generate Markdown file, which should begin the process of creating the file that will be the ReadMeFile, Do tomorrow
 
-
 async function exportReadmeFile(data) {
   const fileData = data;
-  const blob = new Blob([fileData], {type: "text/plain" });
+  const blob = new Blob([fileData], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.download = "README.md";
@@ -38,8 +37,7 @@ const ReadmeForm = () => {
   //This gathers the data and sends it where I want it to go, so this will be likely sent to Generate Markdown
   const handleSubmit = (event) => {
     event.preventDefault();
-    //setLoading(true);
-    //this takes the answers and creates an array that the generateMarkdown.js can map
+
     const answers = [
       title,
       descript,
@@ -51,6 +49,13 @@ const ReadmeForm = () => {
       license,
       contact,
     ];
+
+    for (var i = 0; i < answers.length; i++) {
+      if (!answers[i]) {
+        alert(`Please Enter ${answers[i]}`);
+        return;
+      }
+    }
     exportReadmeFile(generateMarkdown(answers));
     //alert();
   };
@@ -157,12 +162,7 @@ const ReadmeForm = () => {
                   <label>{questions[7].choices[0].name}</label>
                 </tr>
                 <tr>
-                  <input
-                    type="radio"
-                    id={license}
-                    name="license"
-                    value="MIT"
-                  />
+                  <input type="radio" id={license} name="license" value="MIT" />
                   <label>{questions[7].choices[1].name}</label>
                 </tr>
                 <tr>
@@ -175,12 +175,7 @@ const ReadmeForm = () => {
                   <label>{questions[7].choices[2].name}</label>
                 </tr>
                 <tr>
-                  <input
-                    type="radio"
-                    id={license}
-                    name="license"
-                    value="GNU"
-                  />
+                  <input type="radio" id={license} name="license" value="GNU" />
                   <label>{questions[7].choices[3].name}</label>
                 </tr>
                 <tr>
@@ -200,7 +195,6 @@ const ReadmeForm = () => {
                     value="none"
                   />
                   <label>No License</label>
-
                 </tr>
               </table>
             </td>
