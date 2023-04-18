@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import React from 'react';
 import ReadmeForm from '../components/Readme_form';
-import TestForm from '../components/testForm';
-
-
 
 
 
@@ -13,7 +9,7 @@ const MainPage = () => {
 
     //Return Dialog
     return (
-        <div className="container text-center" cz-shortcut-listen="true">
+        <div className="Container text-center" cz-shortcut-listen="true">
             <ReadmeForm />
         </div>
     )

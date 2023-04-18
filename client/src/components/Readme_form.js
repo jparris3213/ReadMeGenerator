@@ -7,6 +7,17 @@ import generateMarkdown from "../utils/generateMarkdown";
 
 //Function To Write: Handle the data from the form and send it to Generate Markdown file, which should begin the process of creating the file that will be the ReadMeFile, Do tomorrow
 
+
+async function exportReadmeFile(data) {
+  const fileData = data;
+  const blob = new Blob([fileData], {type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.download = "README.md";
+  link.href = url;
+  link.click();
+}
+
 const ReadmeForm = () => {
   const formRef = useRef(null);
 
@@ -40,8 +51,8 @@ const ReadmeForm = () => {
       license,
       contact,
     ];
-
-    alert(generateMarkdown(answers));
+    exportReadmeFile(generateMarkdown(answers));
+    //alert();
   };
 
   const handleValueChange = (event) => {
